@@ -3,7 +3,6 @@ import './index.css';
 function Message() {
   const dateString = '08/03/2021 12:00:00';
   const showMessage = Date.now() > new Date(dateString).getTime();
-  console.log(process.env.REACT_APP_SECRET_VALUE);
   return (
     <div className="message-popup">
       <div className="message-text">

@@ -1,9 +1,9 @@
-name: Deploy to Netlify
+name: Deploy React App to Netlify
 
 on:
   push:
     branches:
-      - main # або master
+      - main
 
 jobs:
   build-deploy:
@@ -13,23 +13,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20 # або 16, залежно від твого проєкту
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build the React app
-        run: |
-          echo "REACT_APP_SECRET_VALUE=${{ secrets.REACT_APP_SECRET_VALUE }}" >> .env
-          npm run build
+      - name: Inject environment variables
+        run: echo "REACT_APP_SECRET_VALUE=${{ secrets.REACT_APP_SECRET_VALUE }}" > .env
+
+      - name: Build the app
+        run: npm run build
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2.0.0
         with:
           publish-dir: ./build
+          production: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

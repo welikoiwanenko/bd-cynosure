@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Content from './components/Content';
 
 function App() {
-
+  console.log(process.env.REACT_APP_SECRET_VALUE);
   return (
     <>
       <BrowserView>
