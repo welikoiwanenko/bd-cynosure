@@ -1,15 +1,9 @@
 import './index.css';
 
-// TRANSMISSION: V. ALVES [ARASAKA DEFECTOR]
-// >> Hey. If you're reading this — means I still trust you. Or I’m dead. One of those.
-
-// [DATA PACKAGE: #33]
-// To: Squad Leader
-// Subject: Reboot Sequence
-// Content: Mission Log, Gear Pack, Access Key (Steam), and a data chip
-// // Uploaded by: [Твоє ім’я], aka Ghost_23
-
 function Message() {
+  const dateString = '08/03/2021 12:00:00';
+  const showMessage = Date.now() > new Date(dateString).getTime();
+  console.log(process.env.REACT_APP_SECRET_VALUE);
   return (
     <div className="message-popup">
       <div className="message-text">
@@ -21,6 +15,17 @@ function Message() {
         <p>If you're reading this — means I still trust you. Or I’m dead. One of those.</p>
         <p>Just wanted to say "Happy Birthday".</p>
         <p>Stay sharp! And a little bit quite...</p>
+        <p>Oh, yeah, bd present</p>
+        {showMessage
+          ? (
+            <p>It's early</p>
+
+          )
+          : (
+            <p>It's early</p>
+          )
+        }
+
         <p><b>Uploaded by:</b> V. ALVES [ARASAKA DEFECTOR]</p>
       </div>
     </div>
