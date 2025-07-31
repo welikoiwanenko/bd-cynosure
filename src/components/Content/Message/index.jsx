@@ -1,7 +1,7 @@
 import './index.css';
 
 function Message() {
-  const dateString = '08/03/2021 12:00:00';
+  const dateString = '08/03/2025 12:00:00';
   const showMessage = Date.now() > new Date(dateString).getTime();
   return (
     <div className="message-popup">
