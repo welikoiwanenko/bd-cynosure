@@ -18,12 +18,12 @@ function ShardScreen(props) {
   const [secondCheckDone, setSecondCheckDone] = useState(false);
   const [thirdCheckDone, setThirdCheckDone] = useState(false);
   const [fourthCheckDone, setFourthCheckDone] = useState(false);
-  const secsForFirstCheck = getRandomInt(1, 2);
-  const secsForSecondCheck = getRandomInt(secsForFirstCheck, secsForFirstCheck + 2);
-  const secsForThirdCheck = getRandomInt(secsForSecondCheck, secsForSecondCheck + 4);
-  const secsForFourthCheck = getRandomInt(secsForThirdCheck, secsForThirdCheck + 1);
-console.log();
+
   useEffect(() => {
+    const secsForFirstCheck = getRandomInt(1, 2);
+    const secsForSecondCheck = getRandomInt(secsForFirstCheck + 1, secsForFirstCheck + 3);
+    const secsForThirdCheck = getRandomInt(secsForSecondCheck + 2, secsForSecondCheck + 9);
+    const secsForFourthCheck = getRandomInt(secsForThirdCheck + 1, secsForThirdCheck + 4);
     console.log(
       secsForFirstCheck,
       secsForSecondCheck,
@@ -57,7 +57,7 @@ console.log();
       clearTimeout(thirdCheck);
       clearTimeout(fourthCheck);
     };
-  }, [secsForFirstCheck, secsForSecondCheck, secsForThirdCheck, secsForFourthCheck]);
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -74,12 +74,10 @@ console.log();
   useEffect(() => {
     if (fourthCheckDone) {
       const firstTimer = setTimeout(() => {
-        console.log(1);
         setInitText('SHARD SEQUENCE INITIALIZED');
       }, 1000);
 
       const secondTimer = setTimeout(() => {
-        console.log(2);
         setCaptionText('OPENING MAIN INTERFACE');
       }, 3000);
 
