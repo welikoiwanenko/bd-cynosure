@@ -213,7 +213,7 @@ function ShardScreen(props) {
           <tbody>
             <tr>
               <td>DATA SEQUENCES</td>
-              <td className='big-cell'>04</td>
+              <td className='big-cell'>01</td>
             </tr>
           </tbody>
         </table>
