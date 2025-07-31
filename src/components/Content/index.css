@@ -1,0 +1,66 @@
+.content-container {
+  height: 60%;
+  width: 80%;
+}
+
+.content {
+  outline: 2px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.start-screen img {
+  width: 50%;
+}
+
+.start-screen button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: default;
+  background: rgba(0,0,0,0);
+  font-family: "Blender Pro", sans-serif;
+  font-weight: bold;
+}
+
+.shard-screen {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.left-pane {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-pane {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-pane {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 75%;
+  height: auto;
+}

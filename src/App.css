@@ -1,0 +1,84 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 100vw;
+  /*background-color: #b8b071;*/
+  background: radial-gradient(#fefbd1, #c9bf7a);
+  color: #4a4a4a;
+  font-family:  'Blender Pro';
+  font-weight: 1200;
+
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.LogoScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-logo {
+  width: 200px;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.TypingEffect {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: white;
+  }
+}
+
+.PuzzleScreen,
+.CompletedScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-view {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d68484;
+}
+
+.not-supported-text {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px;
+
+  font-family:  'Blender Pro';
+  font-weight: 1200;
+}

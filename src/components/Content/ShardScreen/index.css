@@ -1,0 +1,74 @@
+.shard-screen {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.left-pane {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 25px;
+}
+
+.first-cell-pane {
+  background-color: black;
+  color: #fefbd1;
+  font-size: small;
+  text-align: left;
+}
+
+.first-cell-pane p {
+  margin: 0;
+}
+
+.other-cell-shard-pane {
+  display: flex;
+  flex-direction: row;
+  outline-width: 0;
+}
+
+.other-cell-shard-pane img {
+  width: 30%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.middle-pane {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-pane {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+img {
+  width: 75%;
+  height: auto;
+}
+
+.shard-status-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.big-cell {
+  background-color: black;
+  text-align: center;
+  color: #fefbd1;
+  font-size: xxx-large;
+}

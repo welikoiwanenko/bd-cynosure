@@ -1,0 +1,22 @@
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.start-screen img {
+  width: 50%;
+}
+
+.start-screen button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: default;
+  background: rgba(0,0,0,0);
+  font-family: "Blender Pro", sans-serif;
+  font-weight: bold;
+}

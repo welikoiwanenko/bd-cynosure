@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding-bottom: 20px;
+}
+
+table {
+  width: 80%;
+}
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px 10px;
+}
+
+.first-cell {
+  text-align: left;
+  width: 20%;
+}
+
+.second-cell {
+  text-align: center;
+}
+
+.third-cell {
+  text-align: right;
+  width: 20%;
+}
