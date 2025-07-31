@@ -17,8 +17,7 @@ function Message() {
         <p>Oh, yeah, bd present</p>
         {showMessage
           ? (
-            <p>It's early</p>
-
+            <p><b>PIN:</b> {process.env.REACT_APP_PIN || 'CORRUPTED'}<br/><b>DECRYPTED DATA:</b> {process.env.REACT_APP_CODE || 'CORRUPTED'} <br/><b>Expiration Date:</b> {process.env.REACT_APP_PIN && process.env.REACT_APP_CODE ? '2026-07-09' : 'CORRUPTED'}</p>
           )
           : (
             <p>It's early</p>
