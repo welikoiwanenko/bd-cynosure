@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import './App.css';
 import Header from './components/Header';
 import Content from './components/Content';
-// import logo from './logo.svg';
 
 function App() {
 

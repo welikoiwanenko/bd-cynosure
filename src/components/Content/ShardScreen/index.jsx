@@ -22,7 +22,7 @@ function ShardScreen(props) {
   const secsForSecondCheck = getRandomInt(secsForFirstCheck, secsForFirstCheck + 2);
   const secsForThirdCheck = getRandomInt(secsForSecondCheck, secsForSecondCheck + 4);
   const secsForFourthCheck = getRandomInt(secsForThirdCheck, secsForThirdCheck + 1);
-
+console.log();
   useEffect(() => {
     console.log(
       secsForFirstCheck,
@@ -57,7 +57,7 @@ function ShardScreen(props) {
       clearTimeout(thirdCheck);
       clearTimeout(fourthCheck);
     };
-  }, []);
+  }, [secsForFirstCheck, secsForSecondCheck, secsForThirdCheck, secsForFourthCheck]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -69,7 +69,7 @@ function ShardScreen(props) {
     }, 1000)
 
     return () => clearInterval(intervalId);
-  }, [fourthCheckDone]);
+  }, [fourthCheckDone, initText]);
 
   useEffect(() => {
     if (fourthCheckDone) {
@@ -93,7 +93,7 @@ function ShardScreen(props) {
         clearTimeout(thirdTimer);
       };
     }
-  }, [fourthCheckDone, setCaptionText, setInitText])
+  }, [fourthCheckDone, setCaptionText, setInitText, props])
 
   return (
     <div className="shard-screen">
@@ -110,7 +110,7 @@ function ShardScreen(props) {
             <tr style={{ backgroundColor: firstCheckDone ? '#74d377' : '' }}>
               <td>
                 <div className="other-cell-shard-pane">
-                  <img src={interfaceIcon}></img>
+                  <img src={interfaceIcon} alt='icon'></img>
                   <p>MAIN INTERFACE</p>
                 </div>
               </td>
@@ -118,7 +118,7 @@ function ShardScreen(props) {
             <tr style={{ backgroundColor: secondCheckDone ? '#74d377' : '' }}>
               <td>
                 <div className="other-cell-shard-pane">
-                  <img src={interfaceIcon}></img>
+                  <img src={interfaceIcon} alt='icon'></img>
                   <p>BACKUP INTERFACE</p>
                 </div>
               </td>
@@ -126,7 +126,7 @@ function ShardScreen(props) {
             <tr style={{ backgroundColor: thirdCheckDone ? '#74d377' : '' }}>
               <td>
                 <div className="other-cell-shard-pane">
-                  <img src={interfaceIcon}></img>
+                  <img src={interfaceIcon} alt='icon'></img>
                   <p>DATA SEQUENCE</p>
                 </div>
               </td>
@@ -134,7 +134,7 @@ function ShardScreen(props) {
             <tr style={{ backgroundColor: fourthCheckDone ? '#74d377' : '' }}>
               <td>
                 <div className="other-cell-shard-pane">
-                  <img src={interfaceIcon}></img>
+                  <img src={interfaceIcon} alt='icon'></img>
                   <p>PROTECTION PORT</p>
                 </div>
               </td>
