@@ -1,6 +1,4 @@
 import './index.css';
-import shard from './ShardScreen/shard.png';
-import cynosure from './cynosure.png';
 import { useState } from 'react';
 import StartScreen from "./StartScreen";
 import ShardScreen from "./ShardScreen";

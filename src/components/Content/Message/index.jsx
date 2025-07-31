@@ -1,5 +1,4 @@
 import './index.css';
-import cynosure from '../cynosure.png';
 
 // TRANSMISSION: V. ALVES [ARASAKA DEFECTOR]
 // >> Hey. If you're reading this — means I still trust you. Or I’m dead. One of those.
